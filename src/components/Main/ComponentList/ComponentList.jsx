@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {v4 as uuidv4} from 'uuid';
 import ComponentItem from './ComponentItem/ComponentItem'
 import Tasks from '../../../tasks.json'
@@ -14,6 +14,12 @@ const ComponentList = () => {
     description: ""
   });
 
+  // Mensaje tarea añadida
+  const [taskAdd, setTaskAdd] = useState(false);
+
+  // Validación -> 6 caracteres
+  const [error, setError] = useState("");
+
   const handleChange = (e) =>  {
     setValues({
       ...values,
@@ -24,13 +30,35 @@ const ComponentList = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // Validación
+    if (values.title.trim().length < 6) {
+    setError("El título debe tener al menos 6 caracteres.");
+    return; // Evita la creación de la tarea
+  }
+
+  setError("");
+
     setItems([values, ...items]);
 
     setValues({
     title: "",
     description: ""
     });
+
+  setTaskAdd(true);
+  setTimeout(() => setTaskAdd(false), 5000);
   }
+
+  useEffect(() => {
+    // Si no hay nada escrito, no hace nada
+    if (!values.title && !values.description) return;
+    // el timeout
+    const timer = setTimeout(() => {
+      setValues({ title: "", description: "" }); // vaciar formulario
+    }, 5000);
+    // Limpiar el timeout si el usuario escribe algo o envía
+    return () => clearTimeout(timer);
+  }, [values]);
 
   const paintTask = () => items.map((item, index) => <ComponentItem 
   data={item} 
@@ -59,6 +87,7 @@ const ComponentList = () => {
       <h2>Crea tu tarea:</h2>
       <label htmlFor="title">Título</label>
       <input type="text" name="title" id="title" value={values.title} onChange={handleChange}/>
+      {error &&<p className="msg-error">{error}</p>}
 
       <label htmlFor="description">Descripción</label>
       <textarea name="description" id="description" value={values.description} onChange={handleChange}></textarea>
@@ -68,7 +97,10 @@ const ComponentList = () => {
             <button id="validation-btn" disabled>Completa todos los campos</button>
           )
         }
+        
     </form>
+
+     {taskAdd && <p className="msg-add">Tarea añadida</p>}
 
     {/* <p>¿Quiere eliminar todas las tareas?</p> */}
     <button onClick={deleteTasks}>Eliminar Tareas</button>

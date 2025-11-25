@@ -1,9 +1,11 @@
 .container_header {
   width: 80vw;
   background-color: #dad7cd;
+  border-radius: 2px;
 }
 
 .container_header h1 {
   color: #001d3d;
+  text-align: center;
   padding: 10px;
 }
