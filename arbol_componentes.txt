@@ -1,0 +1,18 @@
+App --> App.jsx
+    Header --> Header.jsx -> <header></header>
+    Main --> Main.jsx -> 
+    <main>
+        ComponentList --> ComponentList.jsx -> <form>
+        <input> 
+        <button>ADD</button>
+        </form>
+            ComponentItem --> ComponentItem.jsx -> <ul>
+            <li>TO-DO</li>
+            <li>TO-DO</li>
+            </ul>
+    <button>Clear</button>
+    <button>Borrar</button>
+    <button>Reset</button>
+    </main>
+    
+    Footer --> Footer.jsx -> <footer></footer>

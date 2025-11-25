@@ -1,0 +1,18 @@
+[
+{
+      "title": "Componente de Listas",
+      "description": "Este componente recorre listas de items"
+    },
+    {
+      "title": "Componente de Items",
+      "description": "Cada ComponentItem contiene cada Tarea"
+    },
+    {
+      "title": "Añadir CSS Proyecto ToDo",
+      "description": "Estilos a los componentes"
+    },
+    {
+      "title": "Añadir Componentes React",
+      "description": "Hay que añadir 3 componentes en el proyecto"
+    }
+]

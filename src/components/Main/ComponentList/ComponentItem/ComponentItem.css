@@ -1,0 +1,54 @@
+.container-task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #dad7cd;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.container-task h3 {
+    color: #001d3d;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.container-task p {
+    background-color: #344e41;
+    padding: 10px;
+    color: #dad7cd;
+    font-size: 17px;
+}
+
+.container-task label {
+    color: #001d3d;
+    font-weight: bold;
+}
+
+.container-task
+input[type="checkbox"] {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #001d3d;
+}
+
+.container-task 
+input[type="checkbox"]:checked {
+    background-color: green;
+}
+
+.container-task button {
+    color: #001d3d;
+    width: 60%;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 1px 4px 2px  #344e41;
+    margin-top: 5px;
+}

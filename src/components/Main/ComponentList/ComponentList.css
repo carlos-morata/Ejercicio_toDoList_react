@@ -1,0 +1,90 @@
+.section-list {
+padding: 2px;
+    box-sizing: border-box;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section-list form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.section-list h2 {
+    padding: 5px;
+    font-size: 28px;
+    margin: 0;
+    color: #001d3d;
+    font-weight: bold;
+}
+
+.section-list h2:last-child {
+    margin-top: 10px;
+}
+
+.section-list form label {
+    color: #dad7cd;
+    margin-bottom: 2px;
+}
+
+.section-list form input, textarea {
+    background-color: #344e41;
+    color: #001d3d;
+    padding: 3px;
+    border: none;
+    box-shadow: 0px 0px 2px 1px  #dad7cd;
+}
+
+.section-list form textarea {
+    margin-bottom: 5px;
+}
+
+.section-list form input {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.section-list form input:focus, textarea:focus {
+    outline: none;
+}
+
+.section-list button {
+    color: #344e41;
+    width: 60%;
+    padding: 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 1px 4px 2px  #001d3d;
+    margin-top: 10px;
+}
+
+#validation-btn {
+    color: #001d3dc3;
+    box-shadow: none;
+    padding: 1px;
+}
+
+.section-list .edit {
+    background-color: #dad7cd;
+    box-shadow: 0px 3px 4px 3px #344e41;
+    margin-top: 10px;
+}
+
+.edit-input {
+    background-color: #dad7cd;
+    box-shadow: 0px 3px 4px 3px #344e41;
+}
+
+#save-btn {
+    width: 50%;
+    background-color: #344e41;
+    color: #dad7cd;
+    margin-bottom: 8px;
+}

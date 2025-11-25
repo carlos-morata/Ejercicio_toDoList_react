@@ -1,0 +1,9 @@
+.container_header {
+  width: 80vw;
+  background-color: #dad7cd;
+}
+
+.container_header h1 {
+  color: #001d3d;
+  padding: 10px;
+}

@@ -1,0 +1,11 @@
+.container-footer {
+    width: 80vw;
+    background-color: #dad7cd;
+}
+
+.container-footer p {
+    color: #001d3d;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
