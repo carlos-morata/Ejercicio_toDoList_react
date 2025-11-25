@@ -88,3 +88,17 @@ padding: 2px;
     color: #dad7cd;
     margin-bottom: 8px;
 }
+
+.msg-error {
+    background-color: red;
+    padding: 5px;
+    color: yellow;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.msg-add {
+    background-color: green;
+    padding: 5px;
+    color: white;
+}

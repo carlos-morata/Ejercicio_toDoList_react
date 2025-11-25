@@ -1,6 +1,7 @@
 .container-footer {
     width: 80vw;
     background-color: #dad7cd;
+    border-radius: 2px;
 }
 
 .container-footer p {
