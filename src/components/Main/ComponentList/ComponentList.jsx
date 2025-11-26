@@ -87,7 +87,7 @@ const ComponentList = () => {
       <h2>Crea tu tarea:</h2>
       <label htmlFor="title">Título</label>
       <input type="text" name="title" id="title" value={values.title} onChange={handleChange}/>
-      {error &&<p className="msg-error">{error}</p>}
+      {error && <p className="msg-error">{error}</p>}
 
       <label htmlFor="description">Descripción</label>
       <textarea name="description" id="description" value={values.description} onChange={handleChange}></textarea>
